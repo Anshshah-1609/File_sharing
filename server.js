@@ -17,5 +17,5 @@ app.use('/file', require('./routes/show'))
 app.use('/files/download', require('./routes/download'))
 
 app.listen(port, () => {
-    console.log("server is running on http://localhost:3200")
+    console.log("server is running!")
 })
