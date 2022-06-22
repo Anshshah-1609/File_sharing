@@ -13,7 +13,7 @@ router.get('/:id', async (req, res) => {
             id: file._id,
             fileName: file.filename,
             fileSize: (file.size/1000000).toFixed(2),
-            download: `http://localhost:3200/files/download/${file._id}`
+            download: `${process.env.APP_BASE_URL}/files/download/${file._id}`
         })
     } catch (error) {
         return res.render('download', { error: "Something went wrong!"})

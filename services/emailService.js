@@ -15,19 +15,7 @@ const sendFileMail = async ({ from, to, subject, text, html }) => {
     text,
     html,
   };
-  let info = await transporter.sendMail(mailOptions 
-    // (error, info) => {
-    // if (error) {
-    //     // response = { error: "Something went wrong!" }
-    //     console.log("<--->")
-    //     console.log(error)
-    //     throw new Error(error)
-    // } else {
-    //     console.log("<----------------------->")
-    //     console.log("email sent : "+ info.response)
-    // }   }
-
-    );
+  let info = await transporter.sendMail(mailOptions);
     console.log(info)
 };
 
