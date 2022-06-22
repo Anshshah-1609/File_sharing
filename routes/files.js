@@ -40,12 +40,14 @@ router.post("/", (req, res) => {
         }
 
         // Store file to database
-        const file = new File({
+        const file = await  new File({
             filename: req.file.filename,
             path: req.file.path,
             size: req.file.size 
         })
+        console.log(file)
         const response = await file.save()
+        //return res.send({message: "OK"})
         return res.redirect(`/file/${file._id}`)
         // return res.send({ 
         //   File: file,
